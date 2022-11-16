@@ -1,7 +1,7 @@
 import Location from "../database/models/location.model";
 
 class LocationController {
-    async store(req: any, res: any) {
+    async create(req: any, res: any) {
       console.log(req.body);
       
         const { name, geometry: boundaries } = req.body;
