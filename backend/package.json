@@ -7,7 +7,7 @@
     "start": "npm run build && node ./dist/index.js",
     "dev": "tsnd ./src/index.ts",
     "build": "tsc",
-    "db:reset": "npx sequelize-cli db:drop && npx sequelize-cli db:create && npx sequelize db:migrate && npx sequelize db:seed:all"
+    "db:seed": "npx sequelize db:migrate && npx sequelize db:seed:all"
   },
   "keywords": [],
   "author": "",
