@@ -1,5 +1,5 @@
 import axios from 'axios'
-import mapboxgl, { Map, Marker, Popup } from 'mapbox-gl'
+import mapboxgl, { Marker, Popup } from 'mapbox-gl'
 import { useContext, useEffect, useLayoutEffect, useRef, useState } from 'react'
 import { MapContext, PlacesContext } from '../context'
 import { Loading } from './Loading'
@@ -11,15 +11,14 @@ export const MapView = () => {
   const mapDiv = useRef<HTMLDivElement>(null);
   const [data, setData] = useState<any[]>([]);
 
-  useEffect(() => {
+ /*  useEffect(() => {
     axios.get('http://localhost:8002/users').then((resp) => {
-      
-      
+
       setData(resp.data)
       
     })
     
-  }, []) // funciona como o componentDidMount invocada assim que um component é montado 
+  }, []) */ // funciona como o componentDidMount invocada assim que um component é montado 
 
   useLayoutEffect(() => {
     if (!isLoading) {
