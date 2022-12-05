@@ -24,3 +24,9 @@
   border-radius: 5px;
   width: 250px;
 }
+
+.list-group{
+  max-height: 500px;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
