@@ -1,4 +1,4 @@
-import { useEffect, useReducer } from "react";
+import { useContext, useEffect, useReducer } from "react";
 import { searchApi } from "../../api";
 import { getUserLocation } from "../../helpers/getUserLocation";
 import { PlacesContext } from "./PlacesContext";
@@ -28,23 +28,24 @@ interface Props {
 export const PlacesProvides = ({ children }: Props) => {
 
   const [state, dispatch] = useReducer(placesReducer, INITIAL_STATE);
-
+  
   useEffect(() => {
     getUserLocation()
       .then(lngLat => dispatch({ type: "setUserLocation", payload: lngLat }))
   }, []);
 
   const searchPlacesBrQuery = async (query: string): Promise<Feature[] | any> => {
-    if (query.length === 0) return []; //limpa o state
+    if (query.length === 0) {
+      dispatch({ type: "setPlaces", payload: [] })
+      return []
+    }
     if (!state.userLocation) throw new Error('Não há localização');
 
     dispatch({ type: "setLoadingPlaces" })
 
-    console.log('teste', state.userLocation.join('%2C'));
-
     const resp = await searchApi.get<PlacesResponse>(`/${query}.json`, {
       params: {
-        promixity: state.userLocation.join('%2C')
+        proximity: state.userLocation.join(',')
       }
     });
 

@@ -11,14 +11,14 @@ export const MapView = () => {
   const mapDiv = useRef<HTMLDivElement>(null);
   const [data, setData] = useState<any[]>([]);
 
- /*  useEffect(() => {
+  useEffect(() => {
     axios.get('http://localhost:8002/users').then((resp) => {
 
       setData(resp.data)
       
     })
     
-  }, []) */ // funciona como o componentDidMount invocada assim que um component é montado 
+  }, []) 
 
   useLayoutEffect(() => {
     if (!isLoading) {

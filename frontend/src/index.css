@@ -30,3 +30,7 @@
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
 }
+
+.pointer {
+  cursor: pointer;
+}
