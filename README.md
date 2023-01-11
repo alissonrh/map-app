@@ -2,7 +2,7 @@
 
 # Front-End
 
-O Front-end deste projeto foi construido no curso de ReactPro do Fernando Herrera (@Fernando_Her85 *Twitter*). Ele ensina como usar e manipular mapas do [mapbox](https://www.mapbox.com/) na aplicação React feita com **TypeScrip**. 
+O Front-end deste projeto foi construido no curso de ReactPro do Fernando Herrera (@Fernando_Her85 *Twitter*). Ele ensina como usar e manipular mapas do [mapbox](https://www.mapbox.com/) na aplicação React feita com **TypeScrip**. A aplicação mostra o marcador do local que o usuário está no momento, de acordo com o posicionamento geográfico do computador. Fazendo uma pesquisa por locais próximos, há a possibilidade de ver a rota e os locais procurados no layout da tela.
 
 # Back-End
 
