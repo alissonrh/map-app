@@ -1,5 +1,13 @@
 <h1 align="center">Map App</h1>
 
+# Front-End
+
+O Front-end deste projeto foi construido no curso de ReactPro do Fernando Herrera (@Fernando_Her85 *Twitter*). Ele ensina como usar e manipular mapas do [mapbox](https://www.mapbox.com/) na aplicação React feita com **TypeScrip**. 
+
+# Back-End
+
+Com a finalidade de aprender a usar o **PostGIS** do **Postgres** construi essa aplicação que poderia ter os seus dados *georreferenciados* expostos na minha aplicação front-end deste projeto.
+
 ## PostGIS via Docker:
 
 1 - Crie o contêiner do Postgres
