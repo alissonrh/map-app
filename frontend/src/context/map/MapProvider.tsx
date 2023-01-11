@@ -1,4 +1,6 @@
-import { AnySourceData, LngLatBounds, Map, Marker, Popup } from "mapbox-gl";
+// @ts-ignore
+// eslint-disable-next-line import/no-webpack-loader-syntax
+import { AnySourceData, LngLatBounds, Map, Marker, Popup } from "!mapbox-gl";
 import { useContext, useEffect, useReducer } from "react";
 import { directionsApi } from "../../api";
 import { DirectionsResponse } from "../../interfaces/IDirections";

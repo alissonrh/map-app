@@ -1,5 +1,7 @@
 import axios from 'axios'
-import mapboxgl, { Marker, Popup } from 'mapbox-gl'
+// @ts-ignore
+// eslint-disable-next-line import/no-webpack-loader-syntax
+import mapboxgl, { Marker, Popup } from '!mapbox-gl'
 import { useContext, useEffect, useLayoutEffect, useRef, useState } from 'react'
 import { MapContext, PlacesContext } from '../context'
 import { Loading } from './Loading'
